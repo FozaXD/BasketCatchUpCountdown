@@ -17,7 +17,7 @@
 				if(timeleft > 0) {
 					setTimeout(function() {
 						progress(timeleft - 1, timetotal, $element);
-					}, 1000);
+					}, oneDay);
 				}
 				
 			};
@@ -26,7 +26,7 @@
 				var _final = new Date("2016-11-16");
 				var diffDays = Math.round(Math.abs((_initial.getTime() - _final.getTime())/(oneDay)));
 				var diffDays2 = Math.round(Math.abs((_set.getTime() - _final.getTime())/(oneDay)));
-		progress(89, 110, $('#progressBar'));
+		progress(diffDays, diffDays2, $('#progressBar'));
 		});
 		</script>
 	</head>
