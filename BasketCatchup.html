@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.js"></script>
 		<link rel="stylesheet" href="CatchUpCss.css">
 		<title>Foza Pizzas</title>	
-		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.js"></script>
 		<script type='text/javascript'>
-		function progress(timeleft, timetotal, $element) {
-			var progressBarWidth = timeleft * $element.width() / timetotal;
-			$element.find('div').animate({ width: progressBarWidth }, 500).html(timeleft + " seconds to go");
-			if(timeleft > 0) {
-				setTimeout(function() {
-					progress(timeleft - 1, timetotal, $element);
-				}, 1000);
-			}
-		}
-		progress(180, 180, ('#progressBar'));
-		
+		$(window).load(function(){
+			function progress(timeleft, timetotal, $element) {
+				var progressBarWidth = timeleft * $element.width() / timetotal;
+				$element.find('div').animate({ width: progressBarWidth }, timeleft == timetotal ? 0 : 1000, 'linear').html(timeleft + " days to go");
+				if(timeleft > 0) {
+					setTimeout(function() {
+						progress(timeleft - 1, timetotal, $element);
+					}, 86400000);
+				}
+				
+			};
+
+		progress(89, 89, $('#progressBar'));
+		});
 		</script>
 	</head>
 	
 	<body>
-		<h1>Basket Catch Up Countdown</h1>
+		<h1 align="center">Basket Catch Up Countdown</h1>
 		<div id="progressBar">
 			<div></div>
 		</div>
