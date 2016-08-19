@@ -2,6 +2,9 @@
 <html>
 	<head>
 		<title>Foza Pizzas</title>
+		<script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+		<script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
 		<script>
 			function progress(timeleft, timetotal, $element) {
 					var progressBarWidth = timeleft * $element.width() / timetotal;
@@ -14,7 +17,7 @@
 						progress(timeleft - 1, timetotal, $element);
 					}, 1000);
 				}
-			}
+			};
 			progress(180, 180, $('#progressBar'));
 		</script>
 	</head>
