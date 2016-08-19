@@ -4,7 +4,6 @@
 		<link rel="stylesheet" href="CatchUpCss.css">
 		<title>Foza Pizzas</title>	
 		<script type='text/javascript'>
-		$(window).load(function(){
 		function progress(timeleft, timetotal, $element) {
 			var progressBarWidth = timeleft * $element.width() / timetotal;
 			$element.find('div').animate({ width: progressBarWidth }, 500).html(timeleft + " seconds to go");
