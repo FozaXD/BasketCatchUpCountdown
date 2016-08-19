@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" /> 
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 		<link rel="stylesheet" href="CatchUpCss.css">
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
 		<title>Foza Pizzas</title>	
 		<script type='text/javascript'>
 		$(window).load(function(){
@@ -17,25 +21,27 @@
 				}
 				
 			};
-		var _initial = new Date();
+				var _set = new Date("2016-07-30");
+				var _initial = new Date();
 				var _final = new Date("2016-11-16");
 				var diffDays = Math.round(Math.abs((_initial.getTime() - _final.getTime())/(oneDay)));
-		progress(diffDays, diffDays, $('#progressBar'));
+				var diffDays2 = Math.round(Math.abs((_set.getTime() - _final.getTime())/(oneDay)));
+		progress(diffDays, diffDays2, $('#progressBar'));
 		});
 		</script>
 	</head>
 	
 	<body>
-	<table class="box" border="0px">
+	<center><table border="0px"; style="position:relative;padding-top:20%;height:auto;width:auto;max-width:100%;">
 <tr>
 <td>
-		<h1> Basket Catch Up Countdown</h1>
+		<h1>The Basket Countdown</h1>
 		<div id="progressBar">
 			<div></div>
 		</div>
 </td>
 </tr>
-</table>
+</table></center>
 
 	</body>
 </html>
