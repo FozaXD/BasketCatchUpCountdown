@@ -13,3 +13,7 @@
   width: 0;
   background-color: #CBEA00;
 }
+
+#progressBar div {
+  box-sizing: border-box;
+}
