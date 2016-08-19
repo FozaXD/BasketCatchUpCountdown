@@ -17,17 +17,19 @@
 				if(timeleft > 0) {
 					setTimeout(function() {
 						progress(timeleft - 1, timetotal, $element);
-					}, oneDay);
+					}, 1000);
 				}
-				
 			};
 				var _set = new Date("2016-07-30");
 				var _initial = new Date();
 				var _final = new Date("2016-11-16");
 				var diffDays = Math.round(Math.abs((_initial.getTime() - _final.getTime())/(oneDay)));
 				var diffDays2 = Math.round(Math.abs((_set.getTime() - _final.getTime())/(oneDay)));
-		progress(diffDays, diffDays2, $('#progressBar'));
+		progress(89, 110, $('#progressBar'));
 		});
+		setTimeout(function(){
+			document.getElementById('myimage').style.display = 'block';
+		},89000);
 		</script>
 	</head>
 	
@@ -38,7 +40,8 @@
 		<h1>The Basket Countdown</h1>
 		<div id="progressBar">
 			<div></div>
-		</div>
+		</div>	
+         <img id="myimage" src="https://pbs.twimg.com/profile_images/616542814319415296/McCTpH_E.jpg" border="0" style="display:none"/>   	 
 </td>
 </tr>
 </table></center>
