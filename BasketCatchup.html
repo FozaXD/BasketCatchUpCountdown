@@ -6,19 +6,12 @@
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script>
-			function progress(timeleft, timetotal, $element) {
-					var progressBarWidth = timeleft * $element.width() / timetotal;
-					$element
-					.find('div')
-					.animate({ width: progressBarWidth }, 500)
-					.html(timeleft + " seconds to go");
-					if(timeleft > 0) {
-					setTimeout(function() {
-						progress(timeleft - 1, timetotal, $element);
-					}, 1000);
-				}
+			progress(100, $('#progressBar')); // This is what the timer should update each second
+
+			function progress(percent, $element) {
+				var progressBarWidth = percent * $element.width() / 100;
+				$element.find('div').animate({ width: progressBarWidth }, 500).html(percent + " minutes/seconds to go");
 			};
-			progress(180, 180, $('#progressBar'));
 		</script>
 	</head>
 	
