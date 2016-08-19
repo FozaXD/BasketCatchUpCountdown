@@ -5,7 +5,7 @@
 		<title>Foza Pizzas</title>	
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script>
-			progress(20, 20, ('#progressBar')); // This is what the timer should update each second
+			progress(20, 20, progressBar); // This is what the timer should update each second
 
 			function progress(timeleft, timetotal, $element) {
     var progressBarWidth = timeleft * $element.width() / timetotal;
