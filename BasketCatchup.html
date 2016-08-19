@@ -6,26 +6,36 @@
 		<title>Foza Pizzas</title>	
 		<script type='text/javascript'>
 		$(window).load(function(){
-			function progress(timeleft, timetotal, $element) {
+		var oneDay = 24*60*60*1000;
+			function progress(timeleft, timetotal, $element) {		
 				var progressBarWidth = timeleft * $element.width() / timetotal;
 				$element.find('div').animate({ width: progressBarWidth }, timeleft == timetotal ? 0 : 1000, 'linear').html(timeleft + " days to go");
 				if(timeleft > 0) {
 					setTimeout(function() {
 						progress(timeleft - 1, timetotal, $element);
-					}, 86400000);
+					}, oneDay);
 				}
 				
 			};
-
-		progress(89, 89, $('#progressBar'));
+		var _initial = new Date();
+				var _final = new Date("2016-11-16");
+				var diffDays = Math.round(Math.abs((_initial.getTime() - _final.getTime())/(oneDay)));
+		progress(diffDays, diffDays, $('#progressBar'));
 		});
 		</script>
 	</head>
 	
 	<body>
-		<h1 align="center">Basket Catch Up Countdown</h1>
+	<table class="box" border="0px">
+<tr>
+<td>
+		<h1> Basket Catch Up Countdown</h1>
 		<div id="progressBar">
 			<div></div>
 		</div>
+</td>
+</tr>
+</table>
+
 	</body>
 </html>

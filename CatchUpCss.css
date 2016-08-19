@@ -1,7 +1,7 @@
  #progressBar {
   width: 923px;
   margin: 10px auto;
-  height: 22px;
+  height: 40px;
   background-color: #0A5F44;
 }
 
@@ -9,9 +9,30 @@
   height: 100%;
   text-align: right;
   padding: 0 10px;
-  line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+  line-height: 40px; /* same as #progressBar height if we want text middle aligned */
   width: 0;
-  background-color: #CBEA00;
+  background-color:  #d6d6d6;
+  color: #595959;
   box-sizing: border-box;
+}
+
+h1 {
+	font-size: 16;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	color: #ffffff;
+	text-align: center;
+}
+
+body {
+    background-color: #0d0d0d;
+}
+
+.box {
+width: 50%;
+  height: 50%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
 }
 
