@@ -8,7 +8,7 @@
 			progress(20, 20, ('#progressBar')); // This is what the timer should update each second
 
 			function progress(timeleft, timetotal, $element) {
-    var progressBarWidth = timeleft * $element.width() / timetotal;
+    var progressBarWidth = timeleft * $element[0].width() / timetotal;
     $element
         .find('div')
         .animate({ width: progressBarWidth }, 500)
